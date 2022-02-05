@@ -1,9 +1,8 @@
 import "./styles/today.css";
 import {useState,useEffect} from "react";
 import axios from 'axios';
-import {useSelector, useDispatch} from "react-redux";
+import { useDispatch} from "react-redux";
 import {MonthWeather} from "./Redux/counterSlice";
-import { set } from "jsonpointer";
 
 const Month = ()=> {
     const dispatch = useDispatch();

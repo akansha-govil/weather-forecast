@@ -1,9 +1,0 @@
-
-
-const Weather = () => {
-    
-    return(
-        <>
-        </>
-    )
-}

@@ -1,25 +1,27 @@
 import "./styles/today.css";
 import {useState,useEffect} from "react";
 import axios from 'axios';
-import {useSelector, useDispatch} from "react-redux";
+import { useDispatch} from "react-redux";
 import {updateWeather} from "./Redux/counterSlice";
 
 const Today = (props)=> {
    
     const dispatch = useDispatch();
 
-    const [today,setToday] = useState();
+     const [today,setToday] = useState();
 
     useEffect(()=>{
-        fetchTodayData();
+       
+    fetchTodayData();
     },[props.searchItem])
-
-    async function fetchTodayData(){
+    
+    const fetchTodayData = async() =>{
         try{
             const todayapi = await axios.get(`http://api.openweathermap.org/data/2.5/weather?q=${props.searchItem}&appid=048c43a2f7e00f37c3b4044df2ec3128`)
             console.log(props.searchItem);
            console.log(todayapi.data.main)
            setToday(todayapi.data);
+           console.log(today);
            dispatch(updateWeather(todayapi.data));
            
 
@@ -29,6 +31,8 @@ const Today = (props)=> {
             }
     }
 
+
+    
     return (
         <>
         <div className="today-container">

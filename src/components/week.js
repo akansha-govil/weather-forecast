@@ -1,8 +1,8 @@
 import "./styles/today.css";
-import {useState,useEffect} from "react";
-import axios from 'axios';
-import {useSelector, useDispatch} from "react-redux";
-import {updateWeather} from "./Redux/counterSlice";
+// import {useState,useEffect} from "react";
+// import axios from 'axios';
+// import {useSelector, useDispatch} from "react-redux";
+// import {updateWeather} from "./Redux/counterSlice";
 
 const Week = ()=> {
     // const dispatch = useDispatch();
