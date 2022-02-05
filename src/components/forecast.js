@@ -8,25 +8,9 @@ import Temp from "./tempDetail";
 import Temp1 from "./tempDetail1";
 
 const Forecast = () => {
-    // const navigate = Navigate();
-    // const handleClick = () =>{
-    //     console.log("yes");
-    //     return(
-    //         navigate("/today")
-    //         // <Today />
-    //     )
+   
         const [active, setActive] = useState("Today")
         const [search,setSearch] = useState("London");
-
-        // const handleChange = (e) =>{
-        
-        //     setSearch(
-        //         {
-        //             ...search,
-        //             [e.target.name]: e.target.value
-        //         }
-        //     )
-        // }
 
         console.log(search);
         const current = new Date();
@@ -47,17 +31,14 @@ const Forecast = () => {
                         <Temp1 />
                         <Temp1 />
                     </Carousel>
-                        {/* <h1 className="temp">21 c</h1>
-                        <p className="country"> china</p>
-                        <p><span>min= 23 </span>
-                        <span>max-54</span> </p> */}
+                        
                     </div>
                    
                 </div>
             </div>
             <div className="second-block">
                 <div>
-                    {/* <h2 className = "forecast-head">Forecast</h2> */}
+                    
                     <div className="search"> <input type="serach" className="inputField" placeholder = "ForeCast"onChange={(event)=>{setSearch(event.target.value)}}></input></div>
                    
                     

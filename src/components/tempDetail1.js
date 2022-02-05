@@ -6,8 +6,7 @@ import "./styles/today.css";
 const Temp1 = () => {
    
     const weather = useSelector((state)=>state.weather.list);
-        // console.log("-------------")
-        // console.log(weather)
+        
     return(
         <>
         {
