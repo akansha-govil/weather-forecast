@@ -20,6 +20,8 @@ const Month = ()=> {
            setToday(todayapi.data);
            dispatch(MonthWeather(todayapi.data));
           // setToday(null);
+          console.log(today);
+
 
         } catch(error)
             {
