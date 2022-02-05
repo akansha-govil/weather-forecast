@@ -11,25 +11,25 @@ const Today = (props)=> {
      const [today,setToday] = useState();
 
     useEffect(()=>{
-       
+      const  fetchTodayData = async() =>{
+            try{
+                const todayapi = await axios.get(`http://api.openweathermap.org/data/2.5/weather?q=${props.searchItem}&appid=048c43a2f7e00f37c3b4044df2ec3128`)
+                console.log(props.searchItem);
+               console.log(todayapi.data.main)
+               setToday(todayapi.data);
+               console.log(today);
+               dispatch(updateWeather(todayapi.data));
+               
+    
+            } catch(error)
+                {
+                    console.log("something is wrong");
+                }
+        }
     fetchTodayData();
     },[props.searchItem])
     
-    const fetchTodayData = async() =>{
-        try{
-            const todayapi = await axios.get(`http://api.openweathermap.org/data/2.5/weather?q=${props.searchItem}&appid=048c43a2f7e00f37c3b4044df2ec3128`)
-            console.log(props.searchItem);
-           console.log(todayapi.data.main)
-           setToday(todayapi.data);
-           console.log(today);
-           dispatch(updateWeather(todayapi.data));
-           
-
-        } catch(error)
-            {
-                console.log("something is wrong");
-            }
-    }
+    
 
 
     
